@@ -11,8 +11,18 @@ export default function App() {
 
   return (
     <div>
-      <Webcam ref={webCamRef} style={styles.container}/>
-      <canvas ref={canvasRef} style={styles.container}/>
+      <Webcam ref={webcamRef} style={styles.container}/>
+      <canvas ref={canvasRef} style={{
+        position: "absolute",
+        marginLeft: "auto",
+        marginRight: "auto",
+        left: 0,
+        right: 0,
+        textAlign: "center",
+        zIndex: 9,
+        width: 640,
+        height: 480
+      }}
     </div>
   )
 }
